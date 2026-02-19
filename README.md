@@ -2,7 +2,7 @@
 I use this script to run my laptop in clamshell mode with hyprland so that I can solely use my big ass widescreen monitor
 
 ---
-Installation
+## Installation
 One-shot install (creates folder + adds hyprland keybind)
 ```
 mkdir -p ~/.config/hypr/scripts && \
@@ -11,19 +11,20 @@ chmod +x ~/.config/hypr/scripts/lid.sh && \
 echo 'bind = SUPER, L, exec, ~/.config/hypr/scripts/lid.sh' >> ~/.config/hypr/hyprland.conf
 ```
 
-Manual install
+## Manual install
 1. Save lid.sh to ~/.config/hypr/scripts/
 2. Make executable: chmod +x ~/.config/hypr/scripts/lid.sh
 3. Add to ~/.config/hypr/hyprland.conf:
       bind = SUPER, L, exec, ~/.config/hypr/scripts/lid.sh
    
 ---
-Configuration
+## Configuration
 Edit the script to match your setup:
 - INTERNAL - Your laptop's internal display (default: eDP-1)
+- EXTERNAL - Your External monitor display (DP-X, HDMI-X, it might be labeled differently than my setup)
 - Resolution/refresh settings - Modify the hyprctl keyword monitor commands to match your external monitor's specs
 ---
-Usage
+## Usage
 Press SUPER + L to toggle clamshell mode:
 - First press: Disables internal display, enables external monitor
 - Second press: Re-enables internal display
